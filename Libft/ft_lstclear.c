@@ -6,7 +6,7 @@
 /*   By: lfilloux <lfilloux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 11:38:59 by lfilloux          #+#    #+#             */
-/*   Updated: 2021/11/09 15:49:12 by lfilloux         ###   ########lyon.fr   */
+/*   Updated: 2021/12/10 19:01:59 by lfilloux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
 	t_list	*tmp;
+
 	if (!*lst)
 		return ;
 	while (*lst)
