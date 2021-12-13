@@ -76,7 +76,7 @@ CC = gcc $(CFLAGS)
 CFLAGS = -Wall -Wextra -Werror
 
 
-all: obj $(FT_LIB) $(NAME) $(CHECKER_NAME)
+all: obj $(FT_LIB) $(NAME)
 
 obj:
 	@echo "$(INFO)Creating objects folder... $(NOC)"

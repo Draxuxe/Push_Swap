@@ -6,7 +6,7 @@
 /*   By: lfilloux <lfilloux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 15:35:45 by lfilloux          #+#    #+#             */
-/*   Updated: 2021/11/04 18:17:26 by lfilloux         ###   ########.fr       */
+/*   Updated: 2021/12/13 15:00:00 by lfilloux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,7 @@
 static int	ft_check(long long result, short minus)
 {
 	if (result > 2147483648 || result < -2147483649)
-	{
-		if (minus == 1)
-			return (-1);
-		return (0);
-	}
+		return (-1);
 	return ((int)result * minus);
 }
 

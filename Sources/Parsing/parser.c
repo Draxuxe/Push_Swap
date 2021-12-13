@@ -6,13 +6,13 @@
 /*   By: lfilloux <lfilloux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/27 14:27:29 by lfilloux          #+#    #+#             */
-/*   Updated: 2021/12/08 15:00:47 by lfilloux         ###   ########.fr       */
+/*   Updated: 2021/12/13 15:02:01 by lfilloux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../Includes/push_swap.h"
 
-int	count_args(char **split)
+static int	count_args(char **split)
 {
 	int	i;
 
@@ -65,6 +65,8 @@ void	parser(t_stack **a, char **av, int ac)
 		while (j > -1)
 		{
 			value = ft_atoi(param[j]);
+			if (value == -1 && !ft_strcmp(param[j], "-1"))
+				exit (EXIT_FAILURE);
 			*a = new_elem(*a, value);
 			free(param[j]);
 			i --;

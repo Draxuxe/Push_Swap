@@ -6,7 +6,7 @@
 /*   By: lfilloux <lfilloux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/03 10:11:49 by lfilloux          #+#    #+#             */
-/*   Updated: 2021/12/10 17:46:57 by lfilloux         ###   ########.fr       */
+/*   Updated: 2021/12/13 12:43:28 by lfilloux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,26 +96,4 @@ int	get_bigger_index(t_stack **x, int y)
 		(*x) = (*x)->next;
 	}
 	return (i);
-}
-
-void	sort_3_for_5(t_stack **stack_a)
-{
-	int	top;
-	int	middle;
-	int	bottom;
-
-	top = get_top(*stack_a);
-	middle = get_second(*stack_a);
-	bottom = get_bottom(*stack_a);
-	if (top > middle && bottom > middle && top < bottom)
-		swap(stack_a, 'a');
-	if (top > middle && bottom > middle && top > bottom)
-		return ;
-	if (top < middle && middle > bottom && top < bottom)
-	{
-		swap(stack_a, 'a');
-		rotate(stack_a, 'a');
-	}
-	if (top < middle && middle > bottom && top > bottom)
-		reverse_rotate(stack_a, 'a');
 }
