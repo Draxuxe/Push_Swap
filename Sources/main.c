@@ -6,7 +6,7 @@
 /*   By: lfilloux <lfilloux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/27 14:23:38 by lfilloux          #+#    #+#             */
-/*   Updated: 2021/12/10 18:59:28 by lfilloux         ###   ########.fr       */
+/*   Updated: 2021/12/17 12:16:09 by lfilloux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,9 +33,7 @@ int	main(int ac, char **av)
 	}
 	b = NULL;
 	parser(&a, av, ac);
-	print_list(a);
 	sort(&a, &b);
-	print_list(a);
 	clear_stacks(&a, &b);
 	return (0);
 }
