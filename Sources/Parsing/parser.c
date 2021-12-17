@@ -6,7 +6,7 @@
 /*   By: lfilloux <lfilloux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/27 14:27:29 by lfilloux          #+#    #+#             */
-/*   Updated: 2021/12/17 12:15:28 by lfilloux         ###   ########.fr       */
+/*   Updated: 2021/12/17 14:15:29 by lfilloux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,8 @@ static int	count_args(char **split)
 	return (i);
 }
 
-static void	check_int(char *s)
+static void	check_int(char *s, int value)
 {
-	int	value;
-
-	value = ft_atoi(s);
 	if (value == -1 && !ft_strcmp(s, "-1"))
 	{
 		ft_putstr_fd("Error\n", 2);
@@ -77,7 +74,7 @@ void	parser(t_stack **a, char **av, int ac)
 		while (j > -1)
 		{
 			value = ft_atoi(param[j]);
-			check_int(param[j]);
+			check_int(param[j], value);
 			*a = new_elem(*a, value);
 			free(param[j]);
 			i --;
